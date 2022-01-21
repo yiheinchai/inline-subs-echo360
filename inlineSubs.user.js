@@ -32,6 +32,9 @@
                     childList: true,
                     subtree: true
                 })
+                document.querySelector(".transcript-panel").style.display = "none"
+                document.querySelector(".sidebar").style.flex = "0 0"
+
             } catch {
                 document.querySelector("#tooltips").innerHTML = `<div class="inline-subs" style="width: 100vw; background-color: white; bottom: 50px; font-size: 22px; display: flex; flex-flow: row; justify-content: center; z-index: 3; position: fixed; color: red;"><p>ERROR: Refresh the page, open transcript panel, paste the code again<p></div>`
 
