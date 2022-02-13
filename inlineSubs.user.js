@@ -52,6 +52,7 @@
       document.querySelector(".transcript-panel").style.display = "none";
       document.querySelector(".sidebar").style.flex = "0 0";
 
+
       // Enable drag and drop
       function dragstart_handler(ev) {
         // Add the target element's id to the data transfer object
@@ -61,6 +62,20 @@
       const dragableElement = document.querySelector(".inline-subs");
       // Add the ondragstart event listener
       dragableElement.addEventListener("dragstart", dragstart_handler);
+
+      const showTranscript = () => {
+        document.querySelector(".transcript-panel").style.display = "block";
+      }
+      const hideTranscript = () => {
+        document.querySelector(".transcript-panel").style.display = "none";
+      }
+      // enable transcript panel
+      const openTranscriptButton = document.querySelector(".transcript").closest(".link")
+      openTranscriptButton = innerHTML = `
+      <button class="open_transcript" onclick="showTranscript()>Show</button>
+      <button class="close_transcript" onclick="hideTranscript()">Hide</button>
+      `
+
     } catch (error) {
       console.error(error);
       document.querySelector(
