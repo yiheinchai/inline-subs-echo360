@@ -52,7 +52,6 @@
       document.querySelector(".transcript-panel").style.display = "none";
       document.querySelector(".sidebar").style.flex = "0 0";
 
-
       // Enable drag and drop
       function dragstart_handler(ev) {
         // Add the target element's id to the data transfer object
@@ -63,23 +62,29 @@
       // Add the ondragstart event listener
       dragableElement.addEventListener("dragstart", dragstart_handler);
 
-      const showTranscript = () => {
+      // enable transcript panel
+      const openTranscriptButton = document.querySelector(".actions");
+      function showTranscript() {
         document.querySelector(".transcript-panel").style = "";
         document.querySelector(".sidebar").style.flex = "0 0 400px";
-      }
-      const hideTranscript = () => {
+        openTranscriptButton.innerHTML = `
+      <button class="close_transcript" style="background-color: #00aee4; color: #000f19; font: inherit; border: none;border-radius: 0.25rem; font-size: 13px">Hide</button>
+      `;
+        document.querySelector(".close_transcript").onclick = hideTranscript;
+      };
+      function hideTranscript() {
         document.querySelector(".transcript-panel").style.display = "none";
         document.querySelector(".sidebar").style.flex = "0 0";
-      }
-      // enable transcript panel
-      const openTranscriptButton = document.querySelector(".actions")
+        openTranscriptButton.innerHTML = `
+        <button class="open_transcript" style="background-color: #00aee4; color: #000f19; font: inherit; border: none; border-radius: 0.25rem; font-size: 13px">Show</button>
+        `;
+        document.querySelector(".open_transcript").onclick = showTranscript;
+      };
+
       openTranscriptButton.innerHTML = `
       <button class="open_transcript" style="background-color: #00aee4; color: #000f19; font: inherit; border: none; border-radius: 0.25rem; font-size: 13px">Show</button>
-      <button class="close_transcript" style="background-color: #00aee4; color: #000f19; font: inherit; border: none;border-radius: 0.25rem; font-size: 13px">Hide</button>
-      `
-      document.querySelector(".open_transcript").onclick = showTranscript
-      document.querySelector(".close_transcript").onclick = hideTranscript
-
+      `;
+      document.querySelector(".open_transcript").onclick = showTranscript;
     } catch (error) {
       console.error(error);
       document.querySelector(
