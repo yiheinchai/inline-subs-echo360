@@ -11,8 +11,7 @@
 
 (function () {
   "use strict";
-
-  window.addEventListener("DOMContentLoaded", () => {
+  window.addEventListener("load", (event) => {
 
     // Your code here...
     //do what you need here
