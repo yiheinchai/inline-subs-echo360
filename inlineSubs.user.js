@@ -70,9 +70,9 @@
         document.querySelector(".transcript-panel").style.display = "none";
       }
       // enable transcript panel
-      const openTranscriptButton = document.querySelector(".transcript").closest(".link")
+      const openTranscriptButton = document.querySelector(".actions")
       openTranscriptButton.innerHTML = `
-      <button class="open_transcript" onclick="showTranscript()>Show</button>
+      <button class="open_transcript" onclick="showTranscript()">Show</button>
       <button class="close_transcript" onclick="hideTranscript()">Hide</button>
       `
 
