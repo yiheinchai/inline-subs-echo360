@@ -32,7 +32,7 @@
         .querySelector(".screens")
         .getBoundingClientRect().width;
       document.querySelector("#tooltips").innerHTML = `
-                <div style="width: 100vw; bottom: 50px; display: flex; flex-flow: row; justify-content: center; z-index: 3; position: fixed"">
+                <div style="width: 100vw ; bottom: 50px; display: flex; flex-flow: row; justify-content: center; z-index: 3; position: fixed"">
                   <div
                     class="inline-subs"
                     draggable="true"
