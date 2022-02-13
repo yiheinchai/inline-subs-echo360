@@ -21,7 +21,15 @@
 
             function updateSubtitle() {
                 const width = document.querySelector('.screens').getBoundingClientRect().width
-                document.querySelector("#tooltips").innerHTML = `<div class="inline-subs" style="width: ${width}px; background-color: white; bottom: 50px; font-size: 22px; display: flex; flex-flow: row; justify-content: center; z-index: 3; position: fixed">Welcome to Yi Hein's Inline Subs</div>`
+                document.querySelector("#tooltips").innerHTML = `
+                <div style="width: ${width}px; bottom: 50px; display: flex; flex-flow: row; justify-content: center; z-index: 3; position: fixed"">
+                  <div
+                    class="inline-subs"
+                    style="background-color: rgba(255, 255, 255, 0.713); font-size: 22px; display: flex; flex-flow: row; justify-content: center;"
+                  >
+                  </div>
+                </div>
+                `
                 const text = document.querySelector(".highlight").textContent
                 document.querySelector(".inline-subs").textContent = text
             }
