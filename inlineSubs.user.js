@@ -56,6 +56,7 @@
       function dragstart_handler(ev) {
         // Add the target element's id to the data transfer object
         ev.dataTransfer.setData("text/plain", ev.target.id);
+        ev.dataTransfer.dropEffect = "move";
       }
       const dragableElement = document.querySelector(".inline-subs");
       // Add the ondragstart event listener
