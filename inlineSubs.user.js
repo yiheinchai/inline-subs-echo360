@@ -65,9 +65,11 @@
 
       const showTranscript = () => {
         document.querySelector(".transcript-panel").style.display = "block";
+        document.querySelector(".sidebar").style.flex = "0 0 400px";
       }
       const hideTranscript = () => {
         document.querySelector(".transcript-panel").style.display = "none";
+        document.querySelector(".sidebar").style.flex = "0 0";
       }
       // enable transcript panel
       const openTranscriptButton = document.querySelector(".actions")
