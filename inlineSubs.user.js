@@ -64,7 +64,7 @@
       dragableElement.addEventListener("dragstart", dragstart_handler);
 
       const showTranscript = () => {
-        document.querySelector(".transcript-panel").style.display = "block";
+        document.querySelector(".transcript-panel").style.display = "unset";
         document.querySelector(".sidebar").style.flex = "0 0 400px";
       }
       const hideTranscript = () => {
