@@ -16,7 +16,7 @@
     //do what you need here
     document.querySelector(".transcript").click();
     document.querySelector("#tooltips").innerHTML = `
-    <div style="width: ${width}px; bottom: 50px; display: flex; flex-flow: row; justify-content: center; z-index: 3; position: fixed"">
+    <div style="width: 100vw; bottom: 50px; display: flex; flex-flow: row; justify-content: center; z-index: 3; position: fixed"">
                   <div
                     class="inline-subs"
                     style="background-color: rgba(8, 8, 8, 0.75); font-size: 22px; display: flex; flex-flow: row; justify-content: center; color: rgb(255, 255, 255); padding: 0.25rem; border-radius: 0.25rem"
@@ -30,7 +30,7 @@
         .querySelector(".screens")
         .getBoundingClientRect().width;
       document.querySelector("#tooltips").innerHTML = `
-                <div style="width: 100vw ; bottom: 50px; display: flex; flex-flow: row; justify-content: center; z-index: 3; position: fixed"">
+                <div style="width: ${width}px; bottom: 50px; display: flex; flex-flow: row; justify-content: center; z-index: 3; position: fixed"">
                   <div
                     class="inline-subs"
                     draggable="true"
