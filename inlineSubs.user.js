@@ -11,8 +11,7 @@
 
 (function () {
   "use strict";
-  window.addEventListener("load", (event) => {
-
+  setTimeout(function() {
     // Your code here...
     //do what you need here
     document.querySelector(".transcript").click();
@@ -50,5 +49,5 @@
         "#tooltips"
       ).innerHTML = `<div class="inline-subs" style="width: 100vw; background-color: white; bottom: 50px; font-size: 22px; display: flex; flex-flow: row; justify-content: center; z-index: 3; position: fixed; color: red;"><p>ERROR: Refresh the page, open transcript panel, paste the code again<p></div>`;
     }
-  });
+  }, 2000);
 })();
