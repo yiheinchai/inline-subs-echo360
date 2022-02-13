@@ -74,8 +74,14 @@
       // enable transcript panel
       const openTranscriptButton = document.querySelector(".actions")
       openTranscriptButton.innerHTML = `
-      <button class="open_transcript" onclick="showTranscript()">Show</button>
-      <button class="close_transcript" onclick="hideTranscript()">Hide</button>
+      <button class="open_transcript" onclick="(() => {
+        document.querySelector(".transcript-panel").style.display = "block";
+        document.querySelector(".sidebar").style.flex = "0 0 400px";
+      })">Show</button>
+      <button class="close_transcript" onclick="(() => {
+        document.querySelector(".transcript-panel").style.display = "none";
+        document.querySelector(".sidebar").style.flex = "0 0"; 
+      })">Hide</button>
       `
 
     } catch (error) {
