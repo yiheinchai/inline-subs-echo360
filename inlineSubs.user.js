@@ -59,7 +59,8 @@
       // Add the ondragstart event listener
       dragableElement.addEventListener("dragstart", dragstart_handler);
 
-    } catch {
+    } catch (error){
+    console.error(error)
       document.querySelector(
         "#tooltips"
       ).innerHTML = `<div class="inline-subs" style="width: 100vw; background-color: white; bottom: 50px; font-size: 22px; display: flex; flex-flow: row; justify-content: center; z-index: 3; position: fixed; color: red;"><p>ERROR: Refresh the page, open transcript panel, paste the code again<p></div>`;
