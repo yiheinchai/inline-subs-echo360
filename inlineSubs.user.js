@@ -74,8 +74,8 @@
       // enable transcript panel
       const openTranscriptButton = document.querySelector(".actions")
       openTranscriptButton.innerHTML = `
-      <button class="open_transcript" style="background-color: #00aee4; color: #000f19; font: inherit; border: none; border-radius: 0.5rem; font-size: 16px">Show</button>
-      <button class="close_transcript" style="background-color: #00aee4; color: #000f19; font: inherit; border: none;border-radius: 0.5rem; font-size: 16px">Hide</button>
+      <button class="open_transcript" style="background-color: #00aee4; color: #000f19; font: inherit; border: none; border-radius: 0.25rem; font-size: 13px">Show</button>
+      <button class="close_transcript" style="background-color: #00aee4; color: #000f19; font: inherit; border: none;border-radius: 0.25rem; font-size: 13px">Hide</button>
       `
       document.querySelector(".open_transcript").onclick = showTranscript
       document.querySelector(".close_transcript").onclick = hideTranscript
